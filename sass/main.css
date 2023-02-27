@@ -1,0 +1,103 @@
+html > * {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(204, 41, 41);
+}
+header img {
+  width: auto;
+  height: 40px;
+}
+
+footer {
+  width: 100%;
+  height: max-content;
+  padding: 50px;
+  background-color: rgb(53, 53, 53);
+}
+footer svg {
+  fill: rgb(255, 255, 255);
+  width: auto;
+  height: 25px;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  margin: 0;
+  list-style-type: none;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+main #location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: sans-serif;
+  background-color: rgb(234, 234, 234);
+  padding: 30px 0;
+}
+main #book-the-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+}
+main #how-it-works {
+  display: flex;
+  flex-direction: column;
+}
+main #restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+}
+main #restaurants div {
+  width: 90%;
+  margin: 0 auto;
+}
+main #restaurants div h2 {
+  font-family: sans-serif;
+  align-self: flex-start;
+}
+main #restaurants div a {
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0;
+}
+main #restaurants div a img {
+  width: 100%;
+  height: auto;
+}
+main #restaurants div a h4 {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+main #restaurants div a h5 {
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=main.css.map */
