@@ -1,0 +1,62 @@
+@use '../abstracts/variables'
+
+.card-expanded
+  img
+    width: 100%
+    height: auto
+
+  & > div
+    width: 100%
+    border-radius: 30px
+    transform: translateY(-2%)
+    background-color: rgb(246, 246, 246)
+
+    .card-title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 30px 45px
+
+      h1
+        font-style: italic
+        font-size: 38px
+        font-weight: bold
+
+      .fa-regular
+        font-size: 34px
+
+    h5
+      font-size: 20px
+      font-weight: lighter
+
+      &::after
+        content: ""
+        display: block
+        width: 55px
+        height: 5px
+        margin-top: 10px
+        background-color: variables.$tertiary
+
+    div.menu-wrapper
+      width: 90%
+      margin: 0 auto
+
+      menu
+        margin: 0
+        padding: 0
+
+        li
+          list-style-type: none
+          padding: 20px
+          background-color: white
+          border-radius: 20px
+          margin-bottom: 20px
+
+          h4
+            font-size: 20px
+            margin: 0
+          h6
+            font-size: 16px
+            font-weight: normal
+            margin: 0
+

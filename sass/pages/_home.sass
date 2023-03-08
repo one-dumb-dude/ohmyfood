@@ -1,3 +1,5 @@
+@use '../abstracts/variables'
+
 main
   display: flex
   flex-direction: column
@@ -12,6 +14,9 @@ main
     background-color: rgb(234, 234, 234)
     padding: 30px 0
 
+    .fa-solid.fa-location-dot
+      margin-right: 20px
+
   #book-the-menu
     display: flex
     flex-direction: column
@@ -19,9 +24,86 @@ main
     align-items: center
     background-color: rgb(246, 246, 246)
 
+    h2
+      font-size: 32px
+
+    p
+      font-size: 24px
+      width: 80%
+      text-align: center
+
+    button
+      background: rgb(238,56,253)
+      background: linear-gradient(180deg, rgba(238,56,253,1) 0%, rgba(211,66,251,1) 50%, rgb(165, 105, 238) 100%)
+      padding: 25px 40px
+      border-radius: 35px
+      color: white
+      border: none
+      cursor: pointer
+      font-size: 24px
+      margin: 20px 0 90px 0
+
   #how-it-works
     display: flex
+    align-items: center
     flex-direction: column
+    padding: 50px 0
+
+    h2
+      width: 85%
+
+    ul
+      list-style-type: none
+      padding: 0
+      width: 85%
+
+      li
+        position: relative
+        font-size: 24px
+        padding: 40px 20px
+        border-radius: 30px
+        margin-bottom: 35px
+        background-color: rgb(246, 246, 246)
+        -webkit-box-shadow: 1px 1px 10px -6px #000000
+        box-shadow: 1px 1px 10px -6px #000000
+        cursor: pointer
+
+        &:hover
+          background-color: rgb(245, 237, 255)
+
+        &:hover .fa-solid
+          color: variables.$primary
+
+        &::before
+          position: absolute
+          display: flex
+          justify-content: center
+          align-items: center
+          color: white
+          background-color: variables.$primary
+          width: 32px
+          height: 32px
+          left: 0
+          transform: translateX(-50%)
+          font-size: 12px
+          border-radius: 50%
+
+        &:nth-of-type(1)::before
+          content: '1'
+
+        &:nth-of-type(2)::before
+          content: '2'
+
+        &:nth-of-type(3)::before
+          content: '3'
+
+
+        .fa-solid
+          color: grey
+          width: 30px
+          height: auto
+          margin-right: 35px
+          margin-left: 30px
 
   #restaurants
     display: flex
@@ -30,7 +112,7 @@ main
     align-items: center
     background-color: rgb(246, 246, 246)
 
-    div
+    #restaurants-wrapper
       width: 90%
       margin: 0 auto
 
@@ -39,21 +121,59 @@ main
         align-self: flex-start
 
       a
-        overflow: hidden
-        border-radius: 15px
-        margin: 0
+        display: block
+        width: 100%
+        height: max-content
+        color: initial
+        text-decoration: none
+        margin-bottom: 40px
 
-        img
+        & > div
+          position: relative
           width: 100%
-          height: auto
-
-        h4
-          padding: 20px
+          height: max-content
+          overflow: hidden
           background-color: rgb(255, 255, 255)
-          font-weight: bold
+          border-radius: 20px
+          margin: 0
 
-        h5
-          font-size: 22px
+          .new::before
+            content: 'New'
+            position: absolute
+            top: 10%
+            right: 5%
+            padding: 10px 30px
+            color: rgb(57, 169, 141)
+            border-radius: 5px
+            font-size: 24px
+            font-weight: bold
+            background-color: variables.$tertiary
+
+          img
+            width: 100%
+            height: auto
+
+          .card-text-container
+            display: flex
+            justify-content: space-between
+            padding: 30px
+            box-sizing: border-box
+
+            div
+              width: max-content
+
+              .fa-regular
+                font-size: 28px
+
+            h4
+              background-color: rgb(255, 255, 255)
+              font-weight: bold
+              font-size: 24px
+              margin: 0
+
+            h5
+              font-size: 18px
+              margin: 0
 
 
 

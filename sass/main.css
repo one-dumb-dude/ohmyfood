@@ -12,8 +12,8 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100px;
-  background-color: rgb(204, 41, 41);
+  height: 30px;
+  padding: 25px 0;
 }
 header img {
   width: auto;
@@ -29,17 +29,85 @@ footer {
 footer svg {
   fill: rgb(255, 255, 255);
   width: auto;
-  height: 25px;
+  height: 30px;
+  margin-bottom: 20px;
 }
 footer ul {
   margin: 0;
   padding: 0;
 }
 footer ul li {
-  margin: 0;
+  margin: 0 0 10px 0;
   list-style-type: none;
   font-size: 24px;
   color: rgb(255, 255, 255);
+}
+footer ul li .fa-solid {
+  font-size: 20px;
+  width: 25px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.card-expanded img {
+  width: 100%;
+  height: auto;
+}
+.card-expanded > div {
+  width: 100%;
+  border-radius: 30px;
+  transform: translateY(-2%);
+  background-color: rgb(246, 246, 246);
+}
+.card-expanded > div .card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 45px;
+}
+.card-expanded > div .card-title h1 {
+  font-style: italic;
+  font-size: 38px;
+  font-weight: bold;
+}
+.card-expanded > div .card-title .fa-regular {
+  font-size: 34px;
+}
+.card-expanded > div h5 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.card-expanded > div h5::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 5px;
+  margin-top: 10px;
+  background-color: #99E2D0;
+}
+.card-expanded > div div.menu-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.card-expanded > div div.menu-wrapper menu {
+  margin: 0;
+  padding: 0;
+}
+.card-expanded > div div.menu-wrapper menu li {
+  list-style-type: none;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.card-expanded > div div.menu-wrapper menu li h4 {
+  font-size: 20px;
+  margin: 0;
+}
+.card-expanded > div div.menu-wrapper menu li h6 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
 }
 
 main {
@@ -56,6 +124,9 @@ main #location {
   background-color: rgb(234, 234, 234);
   padding: 30px 0;
 }
+main #location .fa-solid.fa-location-dot {
+  margin-right: 20px;
+}
 main #book-the-menu {
   display: flex;
   flex-direction: column;
@@ -63,9 +134,85 @@ main #book-the-menu {
   align-items: center;
   background-color: rgb(246, 246, 246);
 }
+main #book-the-menu h2 {
+  font-size: 32px;
+}
+main #book-the-menu p {
+  font-size: 24px;
+  width: 80%;
+  text-align: center;
+}
+main #book-the-menu button {
+  background: rgb(238, 56, 253);
+  background: linear-gradient(180deg, rgb(238, 56, 253) 0%, rgb(211, 66, 251) 50%, rgb(165, 105, 238) 100%);
+  padding: 25px 40px;
+  border-radius: 35px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 20px 0 90px 0;
+}
 main #how-it-works {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  padding: 50px 0;
+}
+main #how-it-works h2 {
+  width: 85%;
+}
+main #how-it-works ul {
+  list-style-type: none;
+  padding: 0;
+  width: 85%;
+}
+main #how-it-works ul li {
+  position: relative;
+  font-size: 24px;
+  padding: 40px 20px;
+  border-radius: 30px;
+  margin-bottom: 35px;
+  background-color: rgb(246, 246, 246);
+  -webkit-box-shadow: 1px 1px 10px -6px #000000;
+  box-shadow: 1px 1px 10px -6px #000000;
+  cursor: pointer;
+}
+main #how-it-works ul li:hover {
+  background-color: rgb(245, 237, 255);
+}
+main #how-it-works ul li:hover .fa-solid {
+  color: #9356DC;
+}
+main #how-it-works ul li::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #9356DC;
+  width: 32px;
+  height: 32px;
+  left: 0;
+  transform: translateX(-50%);
+  font-size: 12px;
+  border-radius: 50%;
+}
+main #how-it-works ul li:nth-of-type(1)::before {
+  content: "1";
+}
+main #how-it-works ul li:nth-of-type(2)::before {
+  content: "2";
+}
+main #how-it-works ul li:nth-of-type(3)::before {
+  content: "3";
+}
+main #how-it-works ul li .fa-solid {
+  color: grey;
+  width: 30px;
+  height: auto;
+  margin-right: 35px;
+  margin-left: 30px;
 }
 main #restaurants {
   display: flex;
@@ -74,30 +221,68 @@ main #restaurants {
   align-items: center;
   background-color: rgb(246, 246, 246);
 }
-main #restaurants div {
+main #restaurants #restaurants-wrapper {
   width: 90%;
   margin: 0 auto;
 }
-main #restaurants div h2 {
+main #restaurants #restaurants-wrapper h2 {
   font-family: sans-serif;
   align-self: flex-start;
 }
-main #restaurants div a {
+main #restaurants #restaurants-wrapper a {
+  display: block;
+  width: 100%;
+  height: max-content;
+  color: initial;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+main #restaurants #restaurants-wrapper a > div {
+  position: relative;
+  width: 100%;
+  height: max-content;
   overflow: hidden;
-  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
   margin: 0;
 }
-main #restaurants div a img {
+main #restaurants #restaurants-wrapper a > div .new::before {
+  content: "New";
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  padding: 10px 30px;
+  color: rgb(57, 169, 141);
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #99E2D0;
+}
+main #restaurants #restaurants-wrapper a > div img {
   width: 100%;
   height: auto;
 }
-main #restaurants div a h4 {
-  padding: 20px;
+main #restaurants #restaurants-wrapper a > div .card-text-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  box-sizing: border-box;
+}
+main #restaurants #restaurants-wrapper a > div .card-text-container div {
+  width: max-content;
+}
+main #restaurants #restaurants-wrapper a > div .card-text-container div .fa-regular {
+  font-size: 28px;
+}
+main #restaurants #restaurants-wrapper a > div .card-text-container h4 {
   background-color: rgb(255, 255, 255);
   font-weight: bold;
+  font-size: 24px;
+  margin: 0;
 }
-main #restaurants div a h5 {
-  font-size: 22px;
+main #restaurants #restaurants-wrapper a > div .card-text-container h5 {
+  font-size: 18px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

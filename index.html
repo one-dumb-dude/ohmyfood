@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="sass/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
 </head>
 <body>
 <main>
@@ -11,6 +18,7 @@
         <img src="images/ohmyfood.svg" alt="ohmyfood"/>
     </header>
     <section id="location">
+        <i class="fa-solid fa-location-dot"></i>
         Paris, Belleville
     </section>
     <section id="book-the-menu">
@@ -21,36 +29,72 @@
     <section id="how-it-works">
         <h2>How it works</h2>
         <ul>
-            <li>Choose a restaurant</li>
-            <li>Create your menu</li>
-            <li>Go enjoy it at the restaurant</li>
+            <li><i class="fa-solid fa-mobile-screen-button"></i>Choose a restaurant</li>
+            <li><i class="fa-solid fa-list-ul"></i>Create your menu</li>
+            <li><i class="fa-solid fa-store"></i>Go enjoy it at the restaurant</li>
         </ul>
     </section>
     <section id="restaurants">
-        <div>
+        <div id="restaurants-wrapper">
             <h2>Restaurants</h2>
-            <div>
-                <a href="pages/the-full-pallette.html">
+
+            <a href="pages/the-full-pallette.html">
+                <div>
                     <img src="images/the-full-palette.jpg" alt="the-full-palette">
-                    <h4>The Full Palette</h4>
-                    <h5>New York</h5>
-                </a>
-            </div>
+                    <div class="card-text-container new">
+                        <div>
+                            <h4>The Full Palette</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
 
             <a>
-                <img src="images/the-enchanted-plate.jpg" alt="the-enchanted-plate">
-                <h4>The Enchanted Plate</h4>
-                <h5>New York</h5>
+                <div>
+                    <img src="images/the-enchanted-plate.jpg" alt="the-enchanted-plate">
+                    <div class="card-text-container new">
+                        <div>
+                            <h4>The Enchanted Plate</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
             </a>
             <a>
-                <img src="images/bastille.jpg" alt="bastille">
-                <h4>Bastille</h4>
-                <h5>New York</h5>
+                <div>
+                    <img src="images/bastille.jpg" alt="bastille">
+                    <div class="card-text-container">
+                        <div>
+                            <h4>Bastille</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
             </a>
             <a>
-                <img src="images/la-gourmand.jpg" alt="la-gourmand">
-                <h4>The Full Palette</h4>
-                <h5>New York</h5>
+                <div>
+                    <img src="images/la-gourmand.jpg" alt="la-gourmand">
+                    <div class="card-text-container">
+                        <div>
+                            <h4>The Full Palette</h4>
+                            <h5>New York</h5>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
             </a>
         </div>
     </section>
@@ -67,8 +111,8 @@
         </svg>
 
         <ul>
-            <li>Suggest a restaurant</li>
-            <li>Become a partner</li>
+            <li><i class="fa-solid fa-utensils"></i>Suggest a restaurant</li>
+            <li><i class="fa-solid fa-handshake-angle"></i>Become a partner</li>
             <li>Legal</li>
             <li>Contact</li>
         </ul>
