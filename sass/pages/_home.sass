@@ -1,4 +1,5 @@
 @use '../abstracts/variables'
+@use '../abstracts/mixins'
 
 main
   display: flex
@@ -33,8 +34,8 @@ main
       text-align: center
 
     button
-      background: rgb(238,56,253)
-      background: linear-gradient(180deg, rgba(238,56,253,1) 0%, rgba(211,66,251,1) 50%, rgb(165, 105, 238) 100%)
+      background: variables.$primary
+      @include mixins.button-color
       padding: 25px 40px
       border-radius: 35px
       color: white
