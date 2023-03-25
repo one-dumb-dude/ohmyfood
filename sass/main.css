@@ -8,11 +8,11 @@ body {
 }
 
 @keyframes rise {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -122,8 +122,34 @@ footer ul li .fa-solid {
   margin-bottom: 20px;
   text-overflow: ellipsis;
   cursor: pointer;
-  animation: rise 2s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-  animation-delay: 0.4s;
+  animation: rise 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(1) {
+  animation-delay: 0.0833333333s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(2) {
+  animation-delay: 0.1666666667s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(4) {
+  animation-delay: 0.3333333333s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(5) {
+  animation-delay: 0.4166666667s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(7) {
+  animation-delay: 0.5833333333s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(8) {
+  animation-delay: 0.6666666667s;
+}
+.card-expanded > div div.menu-wrapper menu li:nth-child(9) {
+  animation-delay: 0.75s;
 }
 .card-expanded > div div.menu-wrapper menu li h4 {
   font-size: 20px;
