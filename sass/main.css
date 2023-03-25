@@ -114,15 +114,17 @@ footer ul li .fa-solid {
   padding: 0;
 }
 .card-expanded > div div.menu-wrapper menu li {
+  display: flex;
   opacity: 0;
   list-style-type: none;
-  padding: 20px;
+  height: 100px;
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
   text-overflow: ellipsis;
   cursor: pointer;
   animation: rise 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+  overflow: hidden;
 }
 .card-expanded > div div.menu-wrapper menu li:nth-child(1) {
   animation-delay: 0.0833333333s;
@@ -151,14 +153,65 @@ footer ul li .fa-solid {
 .card-expanded > div div.menu-wrapper menu li:nth-child(9) {
   animation-delay: 0.75s;
 }
-.card-expanded > div div.menu-wrapper menu li h4 {
+.card-expanded > div div.menu-wrapper menu li:hover .check-box {
+  transform: translateX(-100px);
+  transition: 0.5s ease-in-out;
+}
+.card-expanded > div div.menu-wrapper menu li:hover .price {
+  transform: translateX(-100px);
+  transition: 0.5s ease-in-out;
+}
+.card-expanded > div div.menu-wrapper menu li:hover .icon {
+  transform: rotate(360deg);
+  transition-duration: 0.7s;
+}
+.card-expanded > div div.menu-wrapper menu li header.card-texts {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  padding: 0 0 0 25px;
+}
+.card-expanded > div div.menu-wrapper menu li header.card-texts h4 {
   font-size: 20px;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.card-expanded > div div.menu-wrapper menu li h6 {
+.card-expanded > div div.menu-wrapper menu li header.card-texts h6 {
   font-size: 16px;
   font-weight: normal;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.card-expanded > div div.menu-wrapper menu li .price {
+  align-self: center;
+  width: 45px;
+}
+.card-expanded > div div.menu-wrapper menu li .check-box {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  margin: 0 -100px 0 0;
+  background-color: #99E2D0;
+  transition: transform 0.1s ease-out;
+  pointer-events: none;
+}
+.card-expanded > div div.menu-wrapper menu li .check-box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  color: #99e2d0;
+  border-radius: 50%;
+  background-color: white;
 }
 .card-expanded button {
   align-self: center;
@@ -173,6 +226,17 @@ footer ul li .fa-solid {
   cursor: pointer;
 }
 
+@keyframes slideLeft {
+  0% {
+    width: 90%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 75%;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
