@@ -153,8 +153,6 @@ main
           font-weight: bold
           background-color: variables.$tertiary
 
-
-
         .card-text-container
           display: flex
           justify-content: space-between
@@ -164,23 +162,37 @@ main
           div
             width: max-content
 
-            .fa-regular
-              font-size: 28px
+            h4
+              background-color: rgb(255, 255, 255)
+              font-weight: bold
+              font-size: 24px
+              margin: 0
 
-          h4
-            background-color: rgb(255, 255, 255)
-            font-weight: bold
-            font-size: 24px
-            margin: 0
+            h5
+              font-size: 18px
+              margin: 0
 
-          h5
-            font-size: 18px
-            margin: 0
+            &:nth-of-type(2)
+              display: flex
+              align-items: center
 
-.fa-heart
-  -webkit-text-stroke: 2px #000
-  color: transparent
+              .fa
+                font-size: 28px
 
-.heart-like:checked + .fa-heart
-  color: red
-  cursor: pointer
+              .fa-heart
+                -webkit-text-stroke: 2px #000
+                color: transparent
+                pointer-events: none
+
+              .heart-like
+                width: 50px
+                height: 50px
+                transform: translateX(100%)
+                opacity: 0
+                cursor: pointer
+
+              .heart-like:checked + .fa-heart
+                color: variables.$primary
+                -webkit-text-stroke: unset
+                cursor: pointer
+                animation: .5s linear heart-beat

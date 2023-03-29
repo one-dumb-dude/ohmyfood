@@ -1,3 +1,5 @@
+@use '../abstracts/variables'
+
 @keyframes rise
   from
     opacity: 0
@@ -6,3 +8,24 @@
   to
     opacity: 1
     transform: translateY(0)
+
+@keyframes heart-beat
+  0%,10%
+    transform: scale(1)
+    opacity: .5
+    color: rgb(134, 7, 128)
+
+  45%
+    transform: scale(.2) rotate(30deg)
+    opacity: .75
+
+  50%
+    transform: scale(2) rotate(-35deg)
+    opacity: 1
+    color: variables.$primary
+
+  90%,95%
+    transform: scale(1) rotate(10deg)
+
+  100%
+    transform: rotate(-3deg)
