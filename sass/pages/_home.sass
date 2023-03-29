@@ -121,60 +121,66 @@ main
         font-family: sans-serif
         align-self: flex-start
 
-      a
-        display: block
+      & > div
+        position: relative
         width: 100%
         height: max-content
-        color: initial
-        text-decoration: none
+        overflow: hidden
+        background-color: rgb(255, 255, 255)
+        border-radius: 20px
         margin-bottom: 40px
 
-        & > div
-          position: relative
+        a
+          display: block
           width: 100%
           height: max-content
-          overflow: hidden
-          background-color: rgb(255, 255, 255)
-          border-radius: 20px
-          margin: 0
-
-          .new::before
-            content: 'New'
-            position: absolute
-            top: 10%
-            right: 5%
-            padding: 10px 30px
-            color: rgb(57, 169, 141)
-            border-radius: 5px
-            font-size: 24px
-            font-weight: bold
-            background-color: variables.$tertiary
+          color: initial
+          text-decoration: none
 
           img
             width: 100%
             height: auto
 
-          .card-text-container
-            display: flex
-            justify-content: space-between
-            padding: 30px
-            box-sizing: border-box
-
-            div
-              width: max-content
-
-              .fa-regular
-                font-size: 28px
-
-            h4
-              background-color: rgb(255, 255, 255)
-              font-weight: bold
-              font-size: 24px
-              margin: 0
-
-            h5
-              font-size: 18px
-              margin: 0
+        .new::before
+          content: 'New'
+          position: absolute
+          top: 10%
+          right: 5%
+          padding: 10px 30px
+          color: rgb(57, 169, 141)
+          border-radius: 5px
+          font-size: 24px
+          font-weight: bold
+          background-color: variables.$tertiary
 
 
 
+        .card-text-container
+          display: flex
+          justify-content: space-between
+          padding: 30px
+          box-sizing: border-box
+
+          div
+            width: max-content
+
+            .fa-regular
+              font-size: 28px
+
+          h4
+            background-color: rgb(255, 255, 255)
+            font-weight: bold
+            font-size: 24px
+            margin: 0
+
+          h5
+            font-size: 18px
+            margin: 0
+
+.fa-heart
+  -webkit-text-stroke: 2px #000
+  color: transparent
+
+.heart-like:checked + .fa-heart
+  color: red
+  cursor: pointer

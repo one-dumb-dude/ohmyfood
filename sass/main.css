@@ -356,24 +356,27 @@ main #restaurants #restaurants-wrapper h2 {
   font-family: sans-serif;
   align-self: flex-start;
 }
-main #restaurants #restaurants-wrapper a {
-  display: block;
-  width: 100%;
-  height: max-content;
-  color: initial;
-  text-decoration: none;
-  margin-bottom: 40px;
-}
-main #restaurants #restaurants-wrapper a > div {
+main #restaurants #restaurants-wrapper > div {
   position: relative;
   width: 100%;
   height: max-content;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
-  margin: 0;
+  margin-bottom: 40px;
 }
-main #restaurants #restaurants-wrapper a > div .new::before {
+main #restaurants #restaurants-wrapper > div a {
+  display: block;
+  width: 100%;
+  height: max-content;
+  color: initial;
+  text-decoration: none;
+}
+main #restaurants #restaurants-wrapper > div a img {
+  width: 100%;
+  height: auto;
+}
+main #restaurants #restaurants-wrapper > div .new::before {
   content: "New";
   position: absolute;
   top: 10%;
@@ -385,31 +388,37 @@ main #restaurants #restaurants-wrapper a > div .new::before {
   font-weight: bold;
   background-color: #99E2D0;
 }
-main #restaurants #restaurants-wrapper a > div img {
-  width: 100%;
-  height: auto;
-}
-main #restaurants #restaurants-wrapper a > div .card-text-container {
+main #restaurants #restaurants-wrapper > div .card-text-container {
   display: flex;
   justify-content: space-between;
   padding: 30px;
   box-sizing: border-box;
 }
-main #restaurants #restaurants-wrapper a > div .card-text-container div {
+main #restaurants #restaurants-wrapper > div .card-text-container div {
   width: max-content;
 }
-main #restaurants #restaurants-wrapper a > div .card-text-container div .fa-regular {
+main #restaurants #restaurants-wrapper > div .card-text-container div .fa-regular {
   font-size: 28px;
 }
-main #restaurants #restaurants-wrapper a > div .card-text-container h4 {
+main #restaurants #restaurants-wrapper > div .card-text-container h4 {
   background-color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 24px;
   margin: 0;
 }
-main #restaurants #restaurants-wrapper a > div .card-text-container h5 {
+main #restaurants #restaurants-wrapper > div .card-text-container h5 {
   font-size: 18px;
   margin: 0;
+}
+
+.fa-heart {
+  -webkit-text-stroke: 2px #000;
+  color: transparent;
+}
+
+.heart-like:checked + .fa-heart {
+  color: red;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
