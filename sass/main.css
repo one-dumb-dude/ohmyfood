@@ -268,10 +268,13 @@ main #location {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  font-family: sans-serif;
   background-color: rgb(234, 234, 234);
   padding: 30px 0;
+}
+main #location h2 {
+  font-size: 24px;
+  font-family: sans-serif;
+  margin: 0;
 }
 main #location .fa-solid.fa-location-dot {
   margin-right: 20px;
