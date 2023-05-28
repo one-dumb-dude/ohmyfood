@@ -1,5 +1,5 @@
 // Check if the current page is not the index page
-if (!window.location.pathname.endsWith('index.html')) {
+if (!window.location.pathname.endsWith('index.html') || window.location.pathname !== '/') {
     // Create the new div element
     let newDiv = document.createElement("div");
 
