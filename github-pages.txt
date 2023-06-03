@@ -1,1 +1,4 @@
 https://one-dumb-dude.github.io/ohmyfood/
+
+git repo:
+https://github.com/one-dumb-dude/ohmyfood.git
