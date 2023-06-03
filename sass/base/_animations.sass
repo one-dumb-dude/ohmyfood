@@ -52,7 +52,9 @@
   height: 100%
   background-color: white
   animation: hide 0.1s linear 4s forwards
+  pointer-events: none
   z-index: 1
+
 
 #loader
   position: fixed
@@ -65,6 +67,7 @@
   transform: translate(-50%, -50%)
   animation: loading 2s linear 2 forwards, hide 0.1s linear 4s forwards
   z-index: 2
+  pointer-events: none
 
 @keyframes loading
   0%
